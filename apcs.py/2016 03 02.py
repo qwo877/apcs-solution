@@ -1,5 +1,10 @@
+'''
+For this problem, it only requires flipping the input matrix.
+In Python, the zip function and slicing syntax happen to provide an efficient way to perform this operation.
+'''
+
 R, C, M = map(int, input().split())
-matrix = [list(map(int, input().split())) for _ in range(R)]
+matrix = [list(map(int, input().split())) for _ in range(R)] # A simple way to read a matrix
 operations = list(map(int, input().split()))
 
 def reverse_flip(mat):
@@ -18,4 +23,5 @@ R_final = len(matrix)
 C_final = len(matrix[0])
 print(f"{R_final} {C_final}")
 for row in matrix:
+
     print(' '.join(map(str, row)))
